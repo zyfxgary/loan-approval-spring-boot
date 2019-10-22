@@ -1,0 +1,1613 @@
+
+h2. 定义 {anchor:definitions}
+
+h3. AdminUserLogin {anchor:adminuserlogin}
+
+||名称||说明||类型||
+|*accessToken*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*adminUser*\\ \\ _可选_||*样例* : {noformat}"[#crmadminuser]"{noformat}||[CrmAdminUser|#crmadminuser]|
+|*menus*\\ \\ _可选_||系统的菜单\\ \\ *样例* : {noformat}[ "[#crmauth]" ]{noformat}||< [CrmAuth|#crmauth] > array|
+|*permissions*\\ \\ _可选_||*样例* : {noformat}[ "[#permissionlogin]" ]{noformat}||< [PermissionLogin|#permissionlogin] > array|
+
+
+h3. AnswerInfoReq {anchor:answerinforeq}
+
+||名称||说明||类型||
+|*answerEndContent*\\ \\ _可选_||结尾的文本内容(结尾的文本内容)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*answerId*\\ \\ _可选_||回答id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*optionId*\\ \\ _可选_||选项id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*other*\\ \\ _可选_||存放hasOther为1的具体内容\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*questionId*\\ \\ _可选_||题目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*questionType*\\ \\ _可选_||题目类型\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||详细信息(当result中的选项需要填写other信息，在remark中输入信息)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*result*\\ \\ _可选_||回答内容(如果是填空题，则直接存入用户输入的内容，如果是单选和多选，则在用户选择该答案时输入1，没有选择该答案时输入0)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«AdminUserLogin» {anchor:e84ee3f18cca3a0746dd7787b3902444}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#adminuserlogin]"{noformat}||[AdminUserLogin|#adminuserlogin]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«CrmProjectList»» {anchor:b7b0f67bd74e37f9c4ea433a214d674e}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#a4e2c9dc26b77b56a7c141b24cb9f3a2]"{noformat}||[BaseListTo«CrmProjectList»|#a4e2c9dc26b77b56a7c141b24cb9f3a2]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«SpmFollowRecordList»» {anchor:8be5b027134f86b20a2ff9b2b024d274}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#0dab062cd92873c8a685e593b22fbb80]"{noformat}||[BaseListTo«SpmFollowRecordList»|#0dab062cd92873c8a685e593b22fbb80]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«SpmHospitalMain»» {anchor:595e0a508a2f192b8bd19e9a963886d0}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#3d7eea52e73b63ddbc80a5abebf72ab2]"{noformat}||[BaseListTo«SpmHospitalMain»|#3d7eea52e73b63ddbc80a5abebf72ab2]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«SpmWorkFollowRecordList»» {anchor:01ca60b95919ff858ff627b4ea95a646}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#3f524fc91abbd5941f63aed4de264b02]"{noformat}||[BaseListTo«SpmWorkFollowRecordList»|#3f524fc91abbd5941f63aed4de264b02]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«SpmWorkProjectList»» {anchor:94ab6350cb150feb0de0d4773c70afb3}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#b309d8191acb257ca295b48046f17f99]"{noformat}||[BaseListTo«SpmWorkProjectList»|#b309d8191acb257ca295b48046f17f99]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«SpmWorkSiteList»» {anchor:602579a54974b0cdb8b427882283ab87}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#fe4a1d947cb8f0e4b86584d582895829]"{noformat}||[BaseListTo«SpmWorkSiteList»|#fe4a1d947cb8f0e4b86584d582895829]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«BaseListTo«项目相关子任务信息»» {anchor:75b61d6abd1b9dc840bcb470062d8ef2}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#d78a1a21487d7893943fa0148c7b3c3f]"{noformat}||[BaseListTo«项目相关子任务信息»|#d78a1a21487d7893943fa0148c7b3c3f]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«IdName» {anchor:863909f8a9141f668574431d45440433}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#idname]"{noformat}||[IdName|#idname]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«CrmDictGeneral»» {anchor:9bc9d0afadc7490398979d4a9620c7e0}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#crmdictgeneral]" ]{noformat}||< [CrmDictGeneral|#crmdictgeneral] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«CrmProjectSite»» {anchor:241477bd0343f2dce371fd4479ef7b2b}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#crmprojectsite]" ]{noformat}||< [CrmProjectSite|#crmprojectsite] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«FolderTreeResponse»» {anchor:06241a5672fc7820f7a6543d28f82ec7}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#foldertreeresponse]" ]{noformat}||< [FolderTreeResponse|#foldertreeresponse] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«IdNameTotal»» {anchor:eafc25542a1e9eacfa728e063a7f1c79}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#idnametotal]" ]{noformat}||< [IdNameTotal|#idnametotal] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«IdName»» {anchor:b58e663b873f77191bfb9ea1e9e49c97}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#idname]" ]{noformat}||< [IdName|#idname] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmDeliveryTemplate»» {anchor:65971df977812b3027990e7d7f8a8270}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmdeliverytemplate]" ]{noformat}||< [SpmDeliveryTemplate|#spmdeliverytemplate] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmExpressInfo»» {anchor:d26ce3cdae43a2fc3f6a6e4a0472d77f}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmexpressinfo]" ]{noformat}||< [SpmExpressInfo|#spmexpressinfo] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmHospitalFileList»» {anchor:1b7655f4446b63ff2ebad9cd99493eec}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmhospitalfilelist]" ]{noformat}||< [SpmHospitalFileList|#spmhospitalfilelist] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmProjectFileTemplate»» {anchor:316d11ba2e32e3bd1e9ba75b053d84d4}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmprojectfiletemplate]" ]{noformat}||< [SpmProjectFileTemplate|#spmprojectfiletemplate] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmProjectFileUser»» {anchor:7e21cc21030c67a4f21aab369548abfc}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmprojectfileuser]" ]{noformat}||< [SpmProjectFileUser|#spmprojectfileuser] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteApproveFile»» {anchor:d9bb96219342e224eef2757a44e0b712}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsiteapprovefile]" ]{noformat}||< [SpmSiteApproveFile|#spmsiteapprovefile] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteDeliveryFile»» {anchor:b11200e120b236b2f042e0f4eb483099}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitedeliveryfile]" ]{noformat}||< [SpmSiteDeliveryFile|#spmsitedeliveryfile] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteFileBaseModuleDetail»» {anchor:011a5d56749468e21f36a57270744b24}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefilebasemoduledetail]" ]{noformat}||< [SpmSiteFileBaseModuleDetail|#spmsitefilebasemoduledetail] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteFileIntervalList»» {anchor:d26320e3797902404f03323687f5d558}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefileintervallist]" ]{noformat}||< [SpmSiteFileIntervalList|#spmsitefileintervallist] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteFileInterval»» {anchor:914064dac53e53f30ba31b62d20cf8b7}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefileinterval]" ]{noformat}||< [SpmSiteFileInterval|#spmsitefileinterval] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmSiteFileModuleDetail»» {anchor:908e5c5a892281ae3c40dfe0b46c35ab}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefilemoduledetail]" ]{noformat}||< [SpmSiteFileModuleDetail|#spmsitefilemoduledetail] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«SpmTaskSuccessTimeInfo»» {anchor:802403e7dd587f7c0cad40acc17188f2}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#spmtasksuccesstimeinfo]" ]{noformat}||< [SpmTaskSuccessTimeInfo|#spmtasksuccesstimeinfo] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«任务模块信息»» {anchor:7efdb27dd20fc4af0f37c216ddd7ff3d}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#f170c701f10ae7abf98cc465f487959e]" ]{noformat}||< [任务模块信息|#f170c701f10ae7abf98cc465f487959e] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«List«项目相关子任务信息»» {anchor:11583d25dc4dc4dd04fdeaa7c95bc9a3}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}[ "[#e6f1f8917099526b58ff7d3540b382ed]" ]{noformat}||< [项目相关子任务信息|#e6f1f8917099526b58ff7d3540b382ed] > array|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«NullDataTo» {anchor:57934316686d0c0f06bc4c9a5f3c6026}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#nulldatato]"{noformat}||[NullDataTo|#nulldatato]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmExpressInfo» {anchor:196b22ed81670280a6c78ddb55f82860}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmexpressinfo]"{noformat}||[SpmExpressInfo|#spmexpressinfo]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmFollowRecordList» {anchor:736d776fa8f680615189dfc862d26550}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmfollowrecordlist]"{noformat}||[SpmFollowRecordList|#spmfollowrecordlist]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmFollowRecordRelationInfo» {anchor:05561208bf9f0c95ef40f7b0fe9acd96}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmfollowrecordrelationinfo]"{noformat}||[SpmFollowRecordRelationInfo|#spmfollowrecordrelationinfo]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmHospitalMain» {anchor:8fc766ae41e047861a1d465859c750f5}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmhospitalmain]"{noformat}||[SpmHospitalMain|#spmhospitalmain]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmProjectFileTemplate» {anchor:a64b1ce2d485e8c53f594c56d1e00f88}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmprojectfiletemplate]"{noformat}||[SpmProjectFileTemplate|#spmprojectfiletemplate]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmSiteApproveFile» {anchor:a230c099036cad0bc7d70b6f0a6a403f}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmsiteapprovefile]"{noformat}||[SpmSiteApproveFile|#spmsiteapprovefile]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SpmSiteDeliveryFile» {anchor:873b4ee8277c411b2b91698d206257bf}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#spmsitedeliveryfile]"{noformat}||[SpmSiteDeliveryFile|#spmsitedeliveryfile]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«SsuProjectDetail» {anchor:81128f7644783e9c9d18dd4b7a6a151a}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#ssuprojectdetail]"{noformat}||[SsuProjectDetail|#ssuprojectdetail]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«object» {anchor:2e9de6f836ac2d556229adbd14d64b43}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"object"{noformat}||object|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«string» {anchor:9668a7b1ed1a8a4a83d48793d5d416e7}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«任务进度列表» {anchor:f9fc1a2258011fe2c9d8abb3940d3890}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#bc0b6714adc9afa9aee6dda5949a92de]"{noformat}||[任务进度列表|#bc0b6714adc9afa9aee6dda5949a92de]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseApiResponse«项目相关子任务信息» {anchor:bf9d84534a285b43e740dd18ffc4b8d7}
+
+||名称||说明||类型||
+|*data*\\ \\ _可选_||*样例* : {noformat}"[#e6f1f8917099526b58ff7d3540b382ed]"{noformat}||[项目相关子任务信息|#e6f1f8917099526b58ff7d3540b382ed]|
+|*errorCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*errorMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subCode*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subMessage*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. BaseFollowRecordRelation {anchor:basefollowrecordrelation}
+_类型_ : object
+
+
+h3. BaseListTo«CrmProjectList» {anchor:a4e2c9dc26b77b56a7c141b24cb9f3a2}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#crmprojectlist]" ]{noformat}||< [CrmProjectList|#crmprojectlist] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«SpmFollowRecordList» {anchor:0dab062cd92873c8a685e593b22fbb80}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#spmfollowrecordlist]" ]{noformat}||< [SpmFollowRecordList|#spmfollowrecordlist] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«SpmHospitalMain» {anchor:3d7eea52e73b63ddbc80a5abebf72ab2}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#spmhospitalmain]" ]{noformat}||< [SpmHospitalMain|#spmhospitalmain] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«SpmWorkFollowRecordList» {anchor:3f524fc91abbd5941f63aed4de264b02}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#spmworkfollowrecordlist]" ]{noformat}||< [SpmWorkFollowRecordList|#spmworkfollowrecordlist] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«SpmWorkProjectList» {anchor:b309d8191acb257ca295b48046f17f99}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#spmworkprojectlist]" ]{noformat}||< [SpmWorkProjectList|#spmworkprojectlist] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«SpmWorkSiteList» {anchor:fe4a1d947cb8f0e4b86584d582895829}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#spmworksitelist]" ]{noformat}||< [SpmWorkSiteList|#spmworksitelist] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. BaseListTo«项目相关子任务信息» {anchor:d78a1a21487d7893943fa0148c7b3c3f}
+
+||名称||说明||类型||
+|*pageData*\\ \\ _可选_||*样例* : {noformat}[ "[#e6f1f8917099526b58ff7d3540b382ed]" ]{noformat}||< [项目相关子任务信息|#e6f1f8917099526b58ff7d3540b382ed] > array|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalPages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. CrmAdminUser {anchor:crmadminuser}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*groupId*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*lastLoginTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*password*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*realName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*username*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. CrmAuth {anchor:crmauth}
+
+||名称||说明||类型||
+|*authName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*authUrl*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isshow*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pid*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*selected*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*sort*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*statusBoolean*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*type*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. CrmDictGeneral {anchor:crmdictgeneral}
+
+||名称||说明||类型||
+|*code*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*name*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*typeCode*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. CrmProjectList {anchor:crmprojectlist}
+
+||名称||说明||类型||
+|*businessManager*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*businessManagerName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hasGenetic*\\ \\ _可选_||是否有遗传办（0-没有 1-有）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*indication*\\ \\ _可选_||适应症\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isinvesStart*\\ \\ _可选_||是否研究者发起(0：否 1：是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*mainProjectId*\\ \\ _可选_||主项目信息表主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*mergePsv*\\ \\ _可选_||合并PSV（0-不合并 1-合并）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*opManager*\\ \\ _可选_||运营经理(从管理员表获取)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*opManagerName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*projectCta*\\ \\ _可选_||项目CTA\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectFullName*\\ \\ _可选_||项目完整名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectManager*\\ \\ _可选_||项目经理(从管理员表获取)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectManagerName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*projectName*\\ \\ _可选_||项目简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectNo*\\ \\ _可选_||内部项目编号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectSsuCtas*\\ \\ _可选_||*样例* : {noformat}[ "[#idname]" ]{noformat}||< [IdName|#idname] > array|
+|*projectType*\\ \\ _可选_||1-SMO项目 2-SSU项目 3-CRO项目\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*protocolName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*recommendedSiteCount*\\ \\ _可选_||已推荐中心数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*researchDrug*\\ \\ _可选_||研究药物\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*serviceScope*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*serviceScopeDetail*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*siteCount*\\ \\ _可选_||中心数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteFilterNumber*\\ \\ _可选_||筛选中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sitePlanNumber*\\ \\ _可选_||计划中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sort*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*spmProjectRemindInfo*\\ \\ _可选_||任务提醒相关\\ \\ *样例* : {noformat}"[#spmprojectremindinfo]"{noformat}||[SpmProjectRemindInfo|#spmprojectremindinfo]|
+|*spmProjectTaskCountInfo*\\ \\ _可选_||任务数量相关\\ \\ *样例* : {noformat}"[#spmprojecttaskcountinfo]"{noformat}||[SpmProjectTaskCountInfo|#spmprojecttaskcountinfo]|
+|*sponsorName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*startDate*\\ \\ _可选_||启动日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*status*\\ \\ _可选_||项目状态(从字典中获取（project_status）)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*statusDetail*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*trialStages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*trialStagesDetail*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*trialType*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*trialTypeDetail*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. CrmProjectSite {anchor:crmprojectsite}
+
+||名称||说明||类型||
+|*city*\\ \\ _可选_||城市ID(从公共接口获取（省市库）)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*cityName*\\ \\ _可选_||城市名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*commissioners*\\ \\ _可选_||ssu专员\\ \\ *样例* : {noformat}[ "[#ssucommissioner]" ]{noformat}||< [SsuCommissioner|#ssucommissioner] > array|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*departmentId*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*departmentName*\\ \\ _可选_||医院科室名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*displayName*\\ \\ _可选_||中心简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*doctorAndDepartmentId*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*hospitalId*\\ \\ _可选_||医院ID(从公共接口获取（医院库）)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*hospitalName*\\ \\ _可选_||医院名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isleadingSite*\\ \\ _可选_||是否组长单位(0：否 1：是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*piDoctorId*\\ \\ _可选_||PI(从公共接口获取（医者库）)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*piDoctorName*\\ \\ _可选_||研究者名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*pl*\\ \\ _可选_||项目组长id\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*plName*\\ \\ _可选_||项目组长\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目基本信息表主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*projectNo*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*province*\\ \\ _可选_||省份ID(从公共接口获取（省市库）)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*provinceName*\\ \\ _可选_||省份名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteNo*\\ \\ _可选_||中心编号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteRoleType*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*spmSiteNewFollowRecord*\\ \\ _可选_||*样例* : {noformat}"[#spmsitenewfollowrecord]"{noformat}||[SpmSiteNewFollowRecord|#spmsitenewfollowrecord]|
+|*spmSiteRemindInfo*\\ \\ _可选_||*样例* : {noformat}"[#spmsiteremindinfo]"{noformat}||[SpmSiteRemindInfo|#spmsiteremindinfo]|
+|*status*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. CrmProjectSiteListRequest {anchor:crmprojectsitelistrequest}
+
+||名称||说明||类型||
+|*apmId*\\ \\ _可选_||pl id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||状态\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FilesDownloadRequest {anchor:filesdownloadrequest}
+
+||名称||说明||类型||
+|*filePaths*\\ \\ _可选_||文件/文件夹全路径\\ \\ *样例* : {noformat}[ "string" ]{noformat}||< string > array|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*rootPath*\\ \\ _可选_||根目录路径\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FindIntervalListRequest {anchor:findintervallistrequest}
+
+||名称||说明||类型||
+|*flag*\\ \\ _可选_||0 查询新的 1 查询旧的\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||搜索条件可不传\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*spmHospitalId*\\ \\ _可选_||spm中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FolderAddRequest {anchor:folderaddrequest}
+
+||名称||说明||类型||
+|*projectId*\\ \\ _必填_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*type*\\ \\ _可选_||文件目录类型(0：项目文件包通用目录 1：交付文件目录 2.立项 3.伦理 4.遗传办 5.递交文件目录)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FolderFileNumRequest {anchor:folderfilenumrequest}
+
+||名称||说明||类型||
+|*folderIds*\\ \\ _可选_||文件目录ID\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FolderModifyRequest {anchor:foldermodifyrequest}
+
+||名称||说明||类型||
+|*addFolderList*\\ \\ _可选_||新增目录列表\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*removeFolderList*\\ \\ _可选_||删除目录列表\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*type*\\ \\ _可选_||目录类型(2.立项 3.伦理 4.遗传办)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. FolderTreeResponse {anchor:foldertreeresponse}
+
+||名称||说明||类型||
+|*baseFolderType*\\ \\ _可选_||原目录类型\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*children*\\ \\ _可选_||子目录\\ \\ *样例* : {noformat}[ "[#foldertreeresponse]" ]{noformat}||< [FolderTreeResponse|#foldertreeresponse] > array|
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||文件目录ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderName*\\ \\ _可选_||文件夹名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderParentId*\\ \\ _可选_||文件目录父级ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*path*\\ \\ _可选_||目录路径\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteName*\\ \\ _可选_||中心名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*type*\\ \\ _可选_||目录类型\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. HospitalMainSearchRequest {anchor:hospitalmainsearchrequest}
+
+||名称||说明||类型||
+|*city*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*province*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||搜索条件，可不传\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. IdName {anchor:idname}
+
+||名称||说明||类型||
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*name*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. IdNameTotal {anchor:idnametotal}
+
+||名称||说明||类型||
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*name*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*total*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. IntervalReq {anchor:intervalreq}
+
+||名称||说明||类型||
+|*date*\\ \\ _可选_||具体的日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*id*\\ \\ _可选_||id 新增的时候为0 删除的时候为具体的id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. NullDataTo {anchor:nulldatato}
+_类型_ : object
+
+
+h3. OnlyPagesRequest {anchor:onlypagesrequest}
+
+||名称||说明||类型||
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||搜索条件可不传\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. OnlySearchKeyRequest {anchor:onlysearchkeyrequest}
+
+||名称||说明||类型||
+|*searchKey*\\ \\ _可选_||搜索条件，可不传\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. PermissionLogin {anchor:permissionlogin}
+
+||名称||说明||类型||
+|*authName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*authUrl*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*groupId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*productCode*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SSUProjectFileAddOrModifyRequest {anchor:ssuprojectfileaddormodifyrequest}
+
+||名称||说明||类型||
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileType*\\ \\ _可选_||分类\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||文件夹ID（分类）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*version*\\ \\ _可选_||版本号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*versionDate*\\ \\ _可选_||版本时间\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SSUSiteApproveAddOrModifyRequest {anchor:ssusiteapproveaddormodifyrequest}
+
+||名称||说明||类型||
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileStatus*\\ \\ _可选_||文件状态(0:中心文件 1:项目文件)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileType*\\ \\ _可选_||文件分类\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||目录ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID(新增时为0)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*printOrder*\\ \\ _可选_||打印要求\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*printUser*\\ \\ _可选_||打印对象\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*quantity*\\ \\ _可选_||打印数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*version*\\ \\ _可选_||版本号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*versionDate*\\ \\ _可选_||版本时间\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SSUSiteApproveRequest {anchor:ssusiteapproverequest}
+
+||名称||说明||类型||
+|*fileStatus*\\ \\ _可选_||文件状态(0:中心文件 1:项目文件 查询全部参数不传)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderId*\\ \\ _可选_||目录id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目id(不能为空)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心id(不能为空)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*userType*\\ \\ _可选_||用户类型(0:CTA 1:CRA)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SSUSiteDeliveryInfoUpdate {anchor:ssusitedeliveryinfoupdate}
+
+||名称||说明||类型||
+|*archivePath*\\ \\ _可选_||归档文件夹\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*archiveStatus*\\ \\ _可选_||归档状态\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||文件名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileType*\\ \\ _可选_||文件类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标记\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SSUSiteDeliveryRequest {anchor:ssusitedeliveryrequest}
+
+||名称||说明||类型||
+|*folderId*\\ \\ _可选_||目录id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目id(不能为空)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*roleType*\\ \\ _可选_||角色类型(0:PM 1:CTA 2:CRA)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心id(不能为空)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmDeliveryTemplate {anchor:spmdeliverytemplate}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileRequire*\\ \\ _可选_||归档要求(0:无 1:原件 2:复印件)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileRequireName*\\ \\ _可选_||归档要求中文名(0:无 1:原件 2:复印件)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileType*\\ \\ _可选_||类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||文件夹ID（分类）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderIds*\\ \\ _可选_||文件目录ID\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*quantity*\\ \\ _可选_||数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmDeliveryTemplateAddOrModifyRequest {anchor:spmdeliverytemplateaddormodifyrequest}
+
+||名称||说明||类型||
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileRequire*\\ \\ _可选_||归档要求(0:无 1:原件 2:复印件)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileType*\\ \\ _可选_||文件分类\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||文件夹ID（分类）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键id新增时为0\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*quantity*\\ \\ _可选_||数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标记\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmExpressInfo {anchor:spmexpressinfo}
+
+||名称||说明||类型||
+|*company*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*expressNumber*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmExpressInfoAddRequest {anchor:spmexpressinfoaddrequest}
+
+||名称||说明||类型||
+|*company*\\ \\ _可选_||快递公司\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*expressNumber*\\ \\ _可选_||快递单号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||主键id(新增时为0)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmExpressInfoSearchRequest {anchor:spmexpressinfosearchrequest}
+
+||名称||说明||类型||
+|*company*\\ \\ _可选_||快递公司\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*expressNumber*\\ \\ _可选_||快递单号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmFileInfoSearchRequest {anchor:spmfileinfosearchrequest}
+
+||名称||说明||类型||
+|*folderIds*\\ \\ _可选_||文件夹ID(父目录需要把所有子目录id传过来)\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*id*\\ \\ _可选_||ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmFollowRecordAddRequest {anchor:spmfollowrecordaddrequest}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*subTaskId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmFollowRecordList {anchor:spmfollowrecordlist}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||内容\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*createUserName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isRead*\\ \\ _可选_||0:未读 1 已读\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*relationId*\\ \\ _可选_||关联id(关联id)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*relationName*\\ \\ _可选_||关联的名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*relationType*\\ \\ _可选_||关联类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*role*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||子任务Id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmFollowRecordListRequest {anchor:spmfollowrecordlistrequest}
+
+||名称||说明||类型||
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||搜索条件可不传\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*subTaskId*\\ \\ _可选_||子任务Id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmFollowRecordRelationInfo {anchor:spmfollowrecordrelationinfo}
+
+||名称||说明||类型||
+|*followRecordId*\\ \\ _可选_||跟进记录id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*followRecordRelations*\\ \\ _可选_||*样例* : {noformat}[ "[#basefollowrecordrelation]" ]{noformat}||< [BaseFollowRecordRelation|#basefollowrecordrelation] > array|
+|*relationId*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*relationType*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmHospitalAddRequest {anchor:spmhospitaladdrequest}
+
+||名称||说明||类型||
+|*city*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*cityName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (城市)|
+|*hospitalId*\\ \\ _必填_||医院id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*hospitalName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (中心名称)|
+|*province*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*provinceName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (省份)|
+
+
+h3. SpmHospitalFileList {anchor:spmhospitalfilelist}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fileId*\\ \\ _可选_||文件id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||文件名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*hospitalMainId*\\ \\ _可选_||医院主表id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*lable*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*lableDetail*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*printFormat*\\ \\ _可选_||打印格式\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*printFormatDetail*\\ \\ _可选_||打印格式\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*printQuantity*\\ \\ _可选_||打印份数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*realName*\\ \\ _可选_||实际文件名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*type*\\ \\ _可选_||文件类型\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*typeDetail*\\ \\ _可选_||文件类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmHospitalFileSearch {anchor:spmhospitalfilesearch}
+
+||名称||说明||类型||
+|*hospitalMainId*\\ \\ _可选_||spm医院id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*lable*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*searchKey*\\ \\ _可选_||文件名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*type*\\ \\ _可选_||文件类型\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmHospitalMain {anchor:spmhospitalmain}
+
+||名称||说明||类型||
+|*city*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*cityName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hospitalId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hospitalName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*province*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*provinceName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmHospitalPagesRequest {anchor:spmhospitalpagesrequest}
+
+||名称||说明||类型||
+|*city*\\ \\ _可选_||城市\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*province*\\ \\ _可选_||省份\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||医院名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*totalSize*\\ \\ _可选_||第一次获取传0，后面传返回的数据\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmProjectFileTemplate {anchor:spmprojectfiletemplate}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileType*\\ \\ _可选_||文件分类\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*folderId*\\ \\ _可选_||文件夹ID（分类）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderIds*\\ \\ _可选_||文件夹IDs\\ \\ *样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*status*\\ \\ _可选_||状态(0:未上传 1:上传失败 2:上传成功)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*version*\\ \\ _可选_||版本号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*versionDate*\\ \\ _可选_||版本时间\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmProjectFileUser {anchor:spmprojectfileuser}
+
+||名称||说明||类型||
+|*adminUserId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*createTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmProjectRemindInfo {anchor:spmprojectremindinfo}
+
+||名称||说明||类型||
+|*contractRemind*\\ \\ _可选_||合同中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*ethicRemind*\\ \\ _可选_||伦理中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*handoverRemind*\\ \\ _可选_||交接中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*inheritanceRemind*\\ \\ _可选_||遗传办中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectApprovalRemind*\\ \\ _可选_||立项中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*surveyRemind*\\ \\ _可选_||调研中消息提醒  0 没有\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmProjectTaskCountInfo {anchor:spmprojecttaskcountinfo}
+
+||名称||说明||类型||
+|*contractCount*\\ \\ _可选_||合同中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*ethicCount*\\ \\ _可选_||伦理中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*handoverCount*\\ \\ _可选_||交接中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*inheritanceCount*\\ \\ _可选_||遗传办中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectApprovalCount*\\ \\ _可选_||立项中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*successCount*\\ \\ _可选_||已完成数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*surveyCount*\\ \\ _可选_||调研中\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*surveyFailCount*\\ \\ _可选_||调研失败数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*surveySuccessCount*\\ \\ _可选_||调研成功数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteApproveFile {anchor:spmsiteapprovefile}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileStatus*\\ \\ _可选_||文件状态(0:中心文件 1:项目文件)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileType*\\ \\ _可选_||文件分类\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*flag*\\ \\ _可选_||更新文件标志位\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderId*\\ \\ _可选_||目录ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*printOrder*\\ \\ _可选_||打印要求\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*printOrderName*\\ \\ _可选_||打印要求中文\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*printUser*\\ \\ _可选_||打印对象\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*printUserDetail*\\ \\ _可选_||打印对象详情\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*quantity*\\ \\ _可选_||打印数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*searchKey*\\ \\ _可选_||searchKey\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*status*\\ \\ _可选_||状态\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标签\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*version*\\ \\ _可选_||版本号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*versionDate*\\ \\ _可选_||版本时间\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmSiteDeliveryFile {anchor:spmsitedeliveryfile}
+
+||名称||说明||类型||
+|*archivePath*\\ \\ _可选_||归档文件夹\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*archiveStatus*\\ \\ _可选_||归档状态\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*archiveStatusDetail*\\ \\ _可选_||归档状态详情\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*detail*\\ \\ _可选_||描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileId*\\ \\ _可选_||文件ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileName*\\ \\ _可选_||文件名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileRequire*\\ \\ _可选_||归档要求(0:无 1:原件 2:复印件)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*fileRequireName*\\ \\ _可选_||归档要求中文名(0:无 1:原件 2:复印件)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*fileType*\\ \\ _可选_||文件类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*flag*\\ \\ _可选_||更新文件标志位\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*folderId*\\ \\ _可选_||文件目录ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||任务类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*quantity*\\ \\ _可选_||数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||(文件名、分类、标签)模糊查询\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*tag*\\ \\ _可选_||标记\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*updateUserName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmSiteFileAnswerAddOrModifyRequest {anchor:spmsitefileansweraddormodifyrequest}
+
+||名称||说明||类型||
+|*answerInfoReqs*\\ \\ _可选_||*样例* : {noformat}[ "[#answerinforeq]" ]{noformat}||< [AnswerInfoReq|#answerinforeq] > array|
+|*intervalReqs*\\ \\ _可选_||上会时间操作数据\\ \\ *样例* : {noformat}[ "[#intervalreq]" ]{noformat}||< [IntervalReq|#intervalreq] > array|
+|*spmHospitalId*\\ \\ _可选_||spm中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteFileAnswerDetailInfo {anchor:spmsitefileanswerdetailinfo}
+
+||名称||说明||类型||
+|*answerEndContent*\\ \\ _可选_||结尾的文本内容(结尾的文本内容)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*answerId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*endContent*\\ \\ _可选_||结尾的文本内容(结尾的文本内容，存在下拉选择以逗号分隔)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*hasOther*\\ \\ _可选_||是否需要填写详细信息(0：否 1：是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*optionName*\\ \\ _可选_||题目选项(选择题才会有选项值，如果是填空和上传都为空)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*other*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*questionId*\\ \\ _可选_||问题ID(关联qc_question的主键ID)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*remark*\\ \\ _可选_||详细信息(当result中的选项需要填写other信息，在remark中输入信息)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*result*\\ \\ _可选_||回答内容(如果是填空题，则直接存入用户输入的内容，如果是上传题则放入url，如果是单选和多选，则在用户选择该答案时输入1，没有选择该答案时输入0)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||序号\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*spmSiteFileQuestionDetails*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefilequestiondetail]" ]{noformat}||< [SpmSiteFileQuestionDetail|#spmsitefilequestiondetail] > array|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteFileBaseInfoDetail {anchor:spmsitefilebaseinfodetail}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||题目描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*questionNo*\\ \\ _可选_||问题序号(问题序号)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*remark*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*type*\\ \\ _可选_||1：单选 2：多选  3：填空 4、日期 5 接待时间6伦理上会日期\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*value*\\ \\ _可选_||题目答案\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmSiteFileBaseModuleDetail {anchor:spmsitefilebasemoduledetail}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除(0：未删除 1：已删除)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*moduleName*\\ \\ _可选_||模块名\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*spmHospitalFileLists*\\ \\ _可选_||*样例* : {noformat}[ "[#spmhospitalfilelist]" ]{noformat}||< [SpmHospitalFileList|#spmhospitalfilelist] > array|
+|*spmSiteFileBaseInfoDetails*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefilebaseinfodetail]" ]{noformat}||< [SpmSiteFileBaseInfoDetail|#spmsitefilebaseinfodetail] > array|
+
+
+h3. SpmSiteFileInterval {anchor:spmsitefileinterval}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*date*\\ \\ _可选_||上会日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*hospitalId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除(0：未删除 1：已删除)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteFileIntervalList {anchor:spmsitefileintervallist}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*date*\\ \\ _可选_||上会日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*dateInfo*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*hospitalId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*indexFlag*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除(0：未删除 1：已删除)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteFileModuleDetail {anchor:spmsitefilemoduledetail}
+
+||名称||说明||类型||
+|*createTime*\\ \\ _可选_||创建时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除(0：未删除 1：已删除)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*moduleName*\\ \\ _可选_||模块名\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*spmSiteFileQuestionDetails*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefilequestiondetail]" ]{noformat}||< [SpmSiteFileQuestionDetail|#spmsitefilequestiondetail] > array|
+
+
+h3. SpmSiteFileQuestionDetail {anchor:spmsitefilequestiondetail}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||题目描述\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||创建日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||主键ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isRemark*\\ \\ _可选_||是否有备注(是否有备注信息0-否 1-是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isdeleted*\\ \\ _可选_||是否删除(0：未删除 1：已删除)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*moduleId*\\ \\ _可选_||spm_site_file_module id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*parentOptionId*\\ \\ _可选_||选项表id(关联选项表的主键ID)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*questionCode*\\ \\ _可选_||问题code\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*questionNo*\\ \\ _可选_||问题序号(问题序号)\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||排序\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*spmSiteFileAnswerDetailInfos*\\ \\ _可选_||*样例* : {noformat}[ "[#spmsitefileanswerdetailinfo]" ]{noformat}||< [SpmSiteFileAnswerDetailInfo|#spmsitefileanswerdetailinfo] > array|
+|*type*\\ \\ _可选_||1：单选 2：多选  3：填空 4、日期 5 接待时间6伦理上会日期\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteNewFollowRecord {anchor:spmsitenewfollowrecord}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||跟进记录文本内容\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*followRecordId*\\ \\ _可选_||跟进记录id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*planningEndTime*\\ \\ _可选_||计划完成结束时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskInfoId*\\ \\ _可选_||子任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*taskName*\\ \\ _可选_||子任务名\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmSitePlan {anchor:spmsiteplan}
+
+||名称||说明||类型||
+|*approvalPlanSubmitDate*\\ \\ _可选_||立项计划递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*approvalPlanSuccessDate*\\ \\ _可选_||立项计划完成日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractPlanExamineDate*\\ \\ _可选_||合同计划审核完成日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractPlanSignDate*\\ \\ _可选_||合同计划签署日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractPlanSubmitDate*\\ \\ _可选_||合同计划递交机构日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractPlanSubmitPiDate*\\ \\ _可选_||合同计划递交pi日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicPlanApprovalDate*\\ \\ _可选_||伦理计划批准日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicPlanIntervalDate*\\ \\ _可选_||伦理计划上会日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicPlanSubmitDate*\\ \\ _可选_||伦理计划递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*geneticPlanGetDate*\\ \\ _可选_||遗传办计划获得承诺书日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*geneticPlanSubmitDate*\\ \\ _可选_||遗传办计划递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*planFilterDate*\\ \\ _可选_||计划筛选日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*planHandoverDate*\\ \\ _可选_||计划交接日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*planStartUpDate*\\ \\ _可选_||计划启动日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*planSurveyDate*\\ \\ _可选_||计划调研日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*projectId*\\ \\ _可选_||项目id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmSiteRemindInfo {anchor:spmsiteremindinfo}
+
+||名称||说明||类型||
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*remindCount*\\ \\ _可选_||未读提醒数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmTaskSuccessTimeInfo {anchor:spmtasksuccesstimeinfo}
+
+||名称||说明||类型||
+|*approvalSuccessSubmitDate*\\ \\ _可选_||立项完成递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*approvalSuccessSuccessDate*\\ \\ _可选_||立项完成完成日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractSuccessExamineDate*\\ \\ _可选_||合同完成审核完成日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractSuccessSignDate*\\ \\ _可选_||合同完成签署日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractSuccessSubmitDate*\\ \\ _可选_||合同完成递交机构日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*contractSuccessSubmitPiDate*\\ \\ _可选_||合同完成递交pi日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicSuccessApprovalDate*\\ \\ _可选_||伦理完成批准日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicSuccessIntervalDate*\\ \\ _可选_||伦理完成上会日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*ethicSuccessSubmitDate*\\ \\ _可选_||伦理完成递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*geneticSuccessGetDate*\\ \\ _可选_||遗传办完成获得承诺书日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*geneticSuccessSubmitDate*\\ \\ _可选_||遗传办完成递交日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*siteId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*successFilterDate*\\ \\ _可选_||完成筛选日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*successHandoverDate*\\ \\ _可选_||完成交接日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*successStartUpDate*\\ \\ _可选_||完成启动日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*successSurveyDate*\\ \\ _可选_||完成调研日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+
+
+h3. SpmWorkFollowRecordList {anchor:spmworkfollowrecordlist}
+
+||名称||说明||类型||
+|*content*\\ \\ _可选_||内容\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||创建时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*createUser*\\ \\ _可选_||创建人id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*createUserName*\\ \\ _可选_||创建人名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*projectName*\\ \\ _可选_||项目简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteName*\\ \\ _可选_||中心简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteRoleType*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*subTaskId*\\ \\ _可选_||子任务id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskName*\\ \\ _可选_||子任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SpmWorkProjectList {anchor:spmworkprojectlist}
+
+||名称||说明||类型||
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*projectName*\\ \\ _可选_||项目简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectNo*\\ \\ _可选_||内部项目编号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteCount*\\ \\ _可选_||中心总数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*successCount*\\ \\ _可选_||已完成中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*surveySuccessCount*\\ \\ _可选_||筛选成功中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. SpmWorkSiteList {anchor:spmworksitelist}
+
+||名称||说明||类型||
+|*projectId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*projectName*\\ \\ _可选_||项目简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectNo*\\ \\ _可选_||内部项目编号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteName*\\ \\ _可选_||中心名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteRoleType*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||中心状态\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SsuCommissioner {anchor:ssucommissioner}
+
+||名称||说明||类型||
+|*email*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*mobile*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*opUserId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*userName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SsuProjectDetail {anchor:ssuprojectdetail}
+
+||名称||说明||类型||
+|*hasGenetic*\\ \\ _可选_||是否有遗传办（0-没有 1-有）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*id*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*leadingSites*\\ \\ _可选_||组长单位\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*mergePsv*\\ \\ _可选_||合并PSV（0-不合并 1-合并）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*piDoctorName*\\ \\ _可选_||研究者名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectFullName*\\ \\ _可选_||项目完整名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectManager*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*projectManagerName*\\ \\ _可选_||项目经理名字\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectName*\\ \\ _可选_||项目简称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectNo*\\ \\ _可选_||内部项目编号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*researchDrug*\\ \\ _可选_||研究药物\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteFilterNumber*\\ \\ _可选_||筛选中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sitePlanNumber*\\ \\ _可选_||计划中心数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sponsorName*\\ \\ _可选_||申办方\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. SsuProjectListRequest {anchor:ssuprojectlistrequest}
+
+||名称||说明||类型||
+|*confirm*\\ \\ _可选_||配人待确认(0-不选择 1-选择)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*projectManager*\\ \\ _可选_||项目经理id\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*searchKey*\\ \\ _可选_||搜索条件\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*status*\\ \\ _可选_||主项目状态(从字典中获取（main_project_status）)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*totalSize*\\ \\ _可选_||第一次获取传0，后面传返回的数据\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. 任务模块信息 {anchor:f170c701f10ae7abf98cc465f487959e}
+
+||名称||说明||类型||
+|*count*\\ \\ _可选_||记录数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*flowRecordCount*\\ \\ _可选_||新跟进记录数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*moduleCode*\\ \\ _可选_||模块编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*moduleName*\\ \\ _可选_||模块名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*spmTaskCountDetailList*\\ \\ _可选_||子模块信息\\ \\ *样例* : {noformat}[ "[#c2b99912c12c1559480f2ca8df1a6ab6]" ]{noformat}||< [统计每一任务的数量|#c2b99912c12c1559480f2ca8df1a6ab6] > array|
+|*subTaskDetailList*\\ \\ _可选_||任务列表\\ \\ *样例* : {noformat}[ "[#e6f1f8917099526b58ff7d3540b382ed]" ]{noformat}||< [项目相关子任务信息|#e6f1f8917099526b58ff7d3540b382ed] > array|
+
+
+h3. 任务状态更新接收对象 {anchor:a15bb0b63e6473736e363eab217048cc}
+
+||名称||说明||类型||
+|*actionType*\\ \\ _可选_||操作类型(0:未提交（退回）、1:提交)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*finishTimeStamp*\\ \\ _可选_||任务完成时间\\ \\ *样例* : {noformat}0{noformat}||integer (int64)|
+|*statusCode*\\ \\ _可选_||状态信息(0:未开始、1:进行中、2:完成、3:终止、4:待定)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*subTaskId*\\ \\ _可选_||子任务ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. 任务进度列表 {anchor:bc0b6714adc9afa9aee6dda5949a92de}
+
+||名称||说明||类型||
+|*masterTaskDetailList*\\ \\ _可选_||主任务信息列表\\ \\ *样例* : {noformat}[ "[#ed7cb8e0f8f736a5447f7c0af3248762]" ]{noformat}||< [项目相关主任务信息|#ed7cb8e0f8f736a5447f7c0af3248762] > array|
+|*subTaskDetailList*\\ \\ _可选_||子任务信息列表\\ \\ *样例* : {noformat}[ "[#e6f1f8917099526b58ff7d3540b382ed]" ]{noformat}||< [项目相关子任务信息|#e6f1f8917099526b58ff7d3540b382ed] > array|
+
+
+h3. 统计每一任务的数量 {anchor:c2b99912c12c1559480f2ca8df1a6ab6}
+
+||名称||说明||类型||
+|*count*\\ \\ _可选_||统计记录数\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*flowRecordCount*\\ \\ _可选_||新跟进记录数量\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskCode*\\ \\ _可选_||主任务编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*masterTaskName*\\ \\ _可选_||主任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*subTaskCode*\\ \\ _可选_||子任务编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*subTaskName*\\ \\ _可选_||子任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. 自定义任务接收数据对象 {anchor:29aaa6e0ebf914420f9674f682d22e0c}
+
+||名称||说明||类型||
+|*auditorRole*\\ \\ _可选_||审核角色\\ \\ *样例* : {noformat}"string"{noformat}||enum (CTA, CRA)|
+|*executiveRole*\\ \\ _可选_||执行角色\\ \\ *样例* : {noformat}"string"{noformat}||enum (CTA, CRA)|
+|*planFinishTimeStamp*\\ \\ _可选_||计划完成时间戳\\ \\ *样例* : {noformat}0{noformat}||integer (int64)|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*taskCode*\\ \\ _可选_||任务编码，准备任务添加子任务时有效，1001-002:添加专员,1001-003:删除专员\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*taskName*\\ \\ _可选_||任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+h3. 项目相关主任务信息 {anchor:ed7cb8e0f8f736a5447f7c0af3248762}
+
+||名称||说明||类型||
+|*currentProgressRate*\\ \\ _可选_||当前进度百分比\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*finishRole*\\ \\ _可选_||完成角色\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||任务ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isNewFlowRecord*\\ \\ _可选_||是否是最新的跟进(0:不是，1：是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*nodeCode*\\ \\ _可选_||节点编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*nodeType*\\ \\ _可选_||节点类型(1、项目任务节点  2、中心任务节点)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*participateRoleType*\\ \\ _可选_||任务参与人角色类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteId*\\ \\ _可选_||机构ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*sort*\\ \\ _可选_||节点序号\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*status*\\ \\ _可选_||当前状态(0:未开始、1:进行中、2:完成、3:终止)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*taskName*\\ \\ _可选_||主任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. 项目相关子任务信息 {anchor:e6f1f8917099526b58ff7d3540b382ed}
+
+||名称||说明||类型||
+|*description*\\ \\ _可选_||任务描述信息\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*finishRole*\\ \\ _可选_||完成角色\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*id*\\ \\ _可选_||子任务ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isCommit*\\ \\ _可选_||是否已提交（0：未提交，1：已提交）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isDelayed*\\ \\ _可选_||是否逾期（0:未逾期，1：已逾期）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isNewFlowRecord*\\ \\ _可选_||是否是最新的跟进(0:不是，1：是)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*isReturn*\\ \\ _可选_||是否已退回（0：否，1：是）\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*lastOperatorDesc*\\ \\ _可选_||最新操作日志\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*lastOperatorUser*\\ \\ _可选_||最新操作人员名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*masterTaskCode*\\ \\ _可选_||主任务编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*masterTaskId*\\ \\ _可选_||主任务ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*masterTaskName*\\ \\ _可选_||主任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*nodeCode*\\ \\ _可选_||节点编码\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*participateRoleType*\\ \\ _可选_||任务参与人角色类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*planningBeginTime*\\ \\ _可选_||计划开始时间(计划时间)\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*planningEndTime*\\ \\ _可选_||计划结束时间(计划时间)\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*projectId*\\ \\ _可选_||项目ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*projectName*\\ \\ _可选_||项目名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*roleType*\\ \\ _可选_||任务执行角色类型\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*siteId*\\ \\ _可选_||中心ID\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*siteName*\\ \\ _可选_||中心名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*sort*\\ \\ _可选_||节点序号\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*stakeholderCode*\\ \\ _可选_||干系人code\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*statusCode*\\ \\ _可选_||当前状态(0:未开始、1:进行中、2:完成、3:终止 4待定)\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+|*taskName*\\ \\ _可选_||任务名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新日期\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*updateUser*\\ \\ _可选_||修改人\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+

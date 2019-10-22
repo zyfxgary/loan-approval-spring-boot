@@ -1,0 +1,6632 @@
+
+h2. 资源 {anchor:paths}
+
+h3. SSU中心基本信息 {anchor:80697476d208567ff022efdce1b2deb2}
+SSU中心基本信息相关接口
+
+
+h4. SSU中心基本信息-编辑中心基本信息 {anchor:addormodifyusingpost}
+{noformat}
+POST /spmSiteFileAnswer/addOrModify
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*reuqest*\\ \\ _必填_||reuqest||[SpmSiteFileAnswerAddOrModifyRequest|#spmsitefileansweraddormodifyrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/addOrModify
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "answerInfoReqs" : [ {
+    "answerEndContent" : "string",
+    "answerId" : 0,
+    "optionId" : 0,
+    "other" : "string",
+    "questionId" : 0,
+    "questionType" : 0,
+    "remark" : "string",
+    "result" : "string"
+  } ],
+  "intervalReqs" : [ {
+    "date" : "string",
+    "id" : 0
+  } ],
+  "spmHospitalId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU中心基本信息-查询中心信息答案 {anchor:answerdetailusingget}
+{noformat}
+GET /spmSiteFileAnswer/answerDetail/{siteId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*siteId*\\ \\ _必填_||siteId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteFileBaseModuleDetail»»|#011a5d56749468e21f36a57270744b24]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/answerDetail/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "moduleName" : "string",
+    "sort" : 0,
+    "spmHospitalFileLists" : [ {
+      "createTime" : "string",
+      "createUser" : 0,
+      "fileId" : 0,
+      "fileName" : "string",
+      "hospitalMainId" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "lable" : "string",
+      "lableDetail" : "string",
+      "printFormat" : 0,
+      "printFormatDetail" : "string",
+      "printQuantity" : 0,
+      "realName" : "string",
+      "remark" : "string",
+      "type" : 0,
+      "typeDetail" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "spmSiteFileBaseInfoDetails" : [ {
+      "content" : "string",
+      "id" : 0,
+      "questionNo" : "string",
+      "remark" : "string",
+      "type" : 0,
+      "value" : "string"
+    } ]
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU中心基本信息-查询中心基本信息 {anchor:detailusingget_1}
+{noformat}
+GET /spmSiteFileAnswer/detail/{spmProjectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*spmProjectId*\\ \\ _必填_||spmProjectId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteFileModuleDetail»»|#908e5c5a892281ae3c40dfe0b46c35ab]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/detail/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "moduleName" : "string",
+    "sort" : 0,
+    "spmSiteFileQuestionDetails" : [ {
+      "content" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "id" : 0,
+      "isRemark" : 0,
+      "isdeleted" : 0,
+      "moduleId" : 0,
+      "parentOptionId" : 0,
+      "questionCode" : "string",
+      "questionNo" : "string",
+      "sort" : 0,
+      "spmSiteFileAnswerDetailInfos" : [ {
+        "answerEndContent" : "string",
+        "answerId" : 0,
+        "createTime" : "string",
+        "createUser" : 0,
+        "endContent" : "string",
+        "hasOther" : 0,
+        "id" : 0,
+        "optionName" : "string",
+        "other" : "string",
+        "questionId" : 0,
+        "remark" : "string",
+        "result" : "string",
+        "sort" : 0,
+        "spmSiteFileQuestionDetails" : [ {
+          "content" : "string",
+          "createTime" : "string",
+          "createUser" : 0,
+          "id" : 0,
+          "isRemark" : 0,
+          "isdeleted" : 0,
+          "moduleId" : 0,
+          "parentOptionId" : 0,
+          "questionCode" : "string",
+          "questionNo" : "string",
+          "sort" : 0,
+          "spmSiteFileAnswerDetailInfos" : [ {
+            "answerEndContent" : "string",
+            "answerId" : 0,
+            "createTime" : "string",
+            "createUser" : 0,
+            "endContent" : "string",
+            "hasOther" : 0,
+            "id" : 0,
+            "optionName" : "string",
+            "other" : "string",
+            "questionId" : 0,
+            "remark" : "string",
+            "result" : "string",
+            "sort" : 0,
+            "spmSiteFileQuestionDetails" : [ "..." ],
+            "updateTime" : "string",
+            "updateUser" : 0
+          } ],
+          "type" : 0,
+          "updateTime" : "string",
+          "updateUser" : 0
+        } ],
+        "updateTime" : "string",
+        "updateUser" : 0
+      } ],
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ]
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU中心基本信息-查询所有伦理上会时间 {anchor:findallintervalusingget}
+{noformat}
+GET /spmSiteFileAnswer/findAllInterval/{spmProjectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*spmProjectId*\\ \\ _必填_||spmProjectId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteFileIntervalList»»|#d26320e3797902404f03323687f5d558]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/findAllInterval/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "date" : "string",
+    "dateInfo" : "string",
+    "hospitalId" : 0,
+    "id" : 0,
+    "indexFlag" : 0,
+    "isdeleted" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU中心基本信息-根据中心查询所有伦理上会时间 {anchor:findallintervalbysiteusingget}
+{noformat}
+GET /spmSiteFileAnswer/findAllIntervalBySite/{siteId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*siteId*\\ \\ _必填_||siteId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteFileIntervalList»»|#d26320e3797902404f03323687f5d558]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/findAllIntervalBySite/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "date" : "string",
+    "dateInfo" : "string",
+    "hospitalId" : 0,
+    "id" : 0,
+    "indexFlag" : 0,
+    "isdeleted" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU中心基本信息-查询伦理上会时间 {anchor:findintervalusingpost}
+{noformat}
+POST /spmSiteFileAnswer/findInterval
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FindIntervalListRequest|#findintervallistrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteFileInterval»»|#914064dac53e53f30ba31b62d20cf8b7]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmSiteFileAnswer/findInterval
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "flag" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "spmHospitalId" : 0,
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "date" : "string",
+    "hospitalId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. SSU工作台 {anchor:da3b6d09e1c1ed22e447843ddee5c517}
+SSU工作台相关的接口
+
+
+h4. SSU工作台-查询工作台跟进记录 {anchor:findworkfollowrecordlistusingpost}
+{noformat}
+POST /work/findWorkFollowRecordList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[OnlyPagesRequest|#onlypagesrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«SpmWorkFollowRecordList»»|#01ca60b95919ff858ff627b4ea95a646]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/work/findWorkFollowRecordList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "content" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "createUserName" : "string",
+      "projectId" : 0,
+      "projectName" : "string",
+      "siteId" : 0,
+      "siteName" : "string",
+      "siteRoleType" : "string",
+      "subTaskId" : 0,
+      "subTaskName" : "string"
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU工作台-查询工作台项目 {anchor:findworkprojectlistusingpost}
+{noformat}
+POST /work/findWorkProjectList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[OnlyPagesRequest|#onlypagesrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«SpmWorkProjectList»»|#94ab6350cb150feb0de0d4773c70afb3]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/work/findWorkProjectList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "projectId" : 0,
+      "projectName" : "string",
+      "projectNo" : "string",
+      "siteCount" : 0,
+      "successCount" : 0,
+      "surveySuccessCount" : 0
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU工作台-查询工作台中心 {anchor:findworksitelistusingpost}
+{noformat}
+POST /work/findWorkSiteList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[OnlyPagesRequest|#onlypagesrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«SpmWorkSiteList»»|#602579a54974b0cdb8b427882283ab87]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/work/findWorkSiteList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "projectId" : 0,
+      "projectName" : "string",
+      "projectNo" : "string",
+      "siteId" : 0,
+      "siteName" : "string",
+      "siteRoleType" : "string",
+      "status" : "string"
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 待完成任务信息列表 {anchor:loadpendingtaskusingget}
+{noformat}
+GET /work/loadPendingTask
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«项目相关子任务信息»»|#11583d25dc4dc4dd04fdeaa7c95bc9a3]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/work/loadPendingTask
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "description" : "string",
+    "finishRole" : "string",
+    "id" : 0,
+    "isCommit" : 0,
+    "isDelayed" : 0,
+    "isNewFlowRecord" : 0,
+    "isReturn" : 0,
+    "lastOperatorDesc" : "string",
+    "lastOperatorUser" : "string",
+    "masterTaskCode" : "string",
+    "masterTaskId" : 0,
+    "masterTaskName" : "string",
+    "nodeCode" : "string",
+    "participateRoleType" : "string",
+    "planningBeginTime" : "string",
+    "planningEndTime" : "string",
+    "projectId" : 0,
+    "projectName" : "string",
+    "roleType" : "string",
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "stakeholderCode" : "string",
+    "statusCode" : 0,
+    "taskName" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. SSU跟进记录 {anchor:8fc0cfa4255c6139d68ed20300ddd57d}
+SSU跟进记录接口管理
+
+
+h4. SSU跟进记录-新增跟进记录 {anchor:addusingput}
+{noformat}
+PUT /spmFollowRecord/add
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmFollowRecordAddRequest|#spmfollowrecordaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmFollowRecordList»|#736d776fa8f680615189dfc862d26550]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmFollowRecord/add
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "content" : "string",
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "content" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "createUserName" : "string",
+    "id" : 0,
+    "isRead" : 0,
+    "isdeleted" : 0,
+    "relationId" : "string",
+    "relationName" : "string",
+    "relationType" : "string",
+    "role" : 0,
+    "subTaskId" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU跟进记录-查询跟进记录关联 {anchor:findfollowrecordrelationinfousingget}
+{noformat}
+GET /spmFollowRecord/findFollowRecordRelationInfo/{followRecordId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*followRecordId*\\ \\ _必填_||followRecordId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmFollowRecordRelationInfo»|#05561208bf9f0c95ef40f7b0fe9acd96]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmFollowRecord/findFollowRecordRelationInfo/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "followRecordId" : 0,
+    "followRecordRelations" : [ { } ],
+    "relationId" : "string",
+    "relationType" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU跟进记录-跟进记录列表 {anchor:listusingpost}
+{noformat}
+POST /spmFollowRecord/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmFollowRecordListRequest|#spmfollowrecordlistrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«SpmFollowRecordList»»|#8be5b027134f86b20a2ff9b2b024d274]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmFollowRecord/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "subTaskId" : 0,
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "content" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "createUserName" : "string",
+      "id" : 0,
+      "isRead" : 0,
+      "isdeleted" : 0,
+      "relationId" : "string",
+      "relationName" : "string",
+      "relationType" : "string",
+      "role" : 0,
+      "subTaskId" : 0
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. SSU项目任务 {anchor:76bd06f4774694ca7e799212f50b9f36}
+项目文件组专员
+
+
+h4. 获取当前登录者(CTA)负责的项目关系数据 {anchor:loadcurrentloginuserrelationinfolistusingget}
+{noformat}
+GET /projectFileUser/loadCurrentLoginUserRelationInfoList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmProjectFileUser»»|#7e21cc21030c67a4f21aab369548abfc]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/projectFileUser/loadCurrentLoginUserRelationInfoList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "adminUserId" : 0,
+    "createTime" : "string",
+    "createUser" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "projectId" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 新增自定义任务 {anchor:addcustomertaskusingpost}
+{noformat}
+POST /task/addCustomerTask
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*customerTaskRequest*\\ \\ _必填_||任务信息||[自定义任务接收数据对象|#29aaa6e0ebf914420f9674f682d22e0c]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/addCustomerTask
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "auditorRole" : "string",
+  "executiveRole" : "string",
+  "planFinishTimeStamp" : 0,
+  "projectId" : 0,
+  "siteId" : 0,
+  "taskCode" : "string",
+  "taskName" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 新增准备任务中子任务 {anchor:addsubtaskforreadytaskusingpost}
+{noformat}
+POST /task/addSubTaskForReadyTask
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*customerTaskRequest*\\ \\ _必填_||任务信息||[自定义任务接收数据对象|#29aaa6e0ebf914420f9674f682d22e0c]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/addSubTaskForReadyTask
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "auditorRole" : "string",
+  "executiveRole" : "string",
+  "planFinishTimeStamp" : 0,
+  "projectId" : 0,
+  "siteId" : 0,
+  "taskCode" : "string",
+  "taskName" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 启动计划 {anchor:enableplanusingpost}
+{noformat}
+POST /task/enablePlan
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmSitePlan|#spmsiteplan]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/enablePlan
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "approvalPlanSubmitDate" : "string",
+  "approvalPlanSuccessDate" : "string",
+  "contractPlanExamineDate" : "string",
+  "contractPlanSignDate" : "string",
+  "contractPlanSubmitDate" : "string",
+  "contractPlanSubmitPiDate" : "string",
+  "ethicPlanApprovalDate" : "string",
+  "ethicPlanIntervalDate" : "string",
+  "ethicPlanSubmitDate" : "string",
+  "geneticPlanGetDate" : "string",
+  "geneticPlanSubmitDate" : "string",
+  "planFilterDate" : "string",
+  "planHandoverDate" : "string",
+  "planStartUpDate" : "string",
+  "planSurveyDate" : "string",
+  "projectId" : 0,
+  "siteId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目任务-查询项目下子任务完成时间 {anchor:findsuccesstimelistusingget}
+{noformat}
+GET /task/findSuccessTimeList/{projectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*projectId*\\ \\ _必填_||项目id||ref|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmTaskSuccessTimeInfo»»|#802403e7dd587f7c0cad40acc17188f2]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/findSuccessTimeList/ref
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "approvalSuccessSubmitDate" : "string",
+    "approvalSuccessSuccessDate" : "string",
+    "contractSuccessExamineDate" : "string",
+    "contractSuccessSignDate" : "string",
+    "contractSuccessSubmitDate" : "string",
+    "contractSuccessSubmitPiDate" : "string",
+    "ethicSuccessApprovalDate" : "string",
+    "ethicSuccessIntervalDate" : "string",
+    "ethicSuccessSubmitDate" : "string",
+    "geneticSuccessGetDate" : "string",
+    "geneticSuccessSubmitDate" : "string",
+    "siteId" : 0,
+    "successFilterDate" : "string",
+    "successHandoverDate" : "string",
+    "successStartUpDate" : "string",
+    "successSurveyDate" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 任务初始化——项目任务 {anchor:initprojecttaskusingput}
+{noformat}
+PUT /task/initProjectTask/{projectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*projectId*\\ \\ _可选_||项目ID||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/initProjectTask/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 任务初始化——中心任务 {anchor:initsitetaskforprojectusingput}
+{noformat}
+PUT /task/initSiteTask/{projectId}/{siteId}/{isNeedHeredityOffice}/{isMergePSV}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*isMergePSV*\\ \\ _可选_||是否合并PSV||enum (true, false)||{noformat}"false"{noformat}|
+|*Path*|*isNeedHeredityOffice*\\ \\ _可选_||是否涉及遗传办||enum (true, false)||{noformat}"false"{noformat}|
+|*Path*|*projectId*\\ \\ _可选_||项目ID||integer (int32)|| |
+|*Path*|*siteId*\\ \\ _可选_||中心ID||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/initSiteTask/0/0/true/true
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目任务-查询子任务详细信息 {anchor:loadsubtaskinfousingget}
+{noformat}
+GET /task/loadSubTaskInfo/{subTaskId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*subTaskId*\\ \\ _必填_||subTaskId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«项目相关子任务信息»|#bf9d84534a285b43e740dd18ffc4b8d7]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/loadSubTaskInfo/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "description" : "string",
+    "finishRole" : "string",
+    "id" : 0,
+    "isCommit" : 0,
+    "isDelayed" : 0,
+    "isNewFlowRecord" : 0,
+    "isReturn" : 0,
+    "lastOperatorDesc" : "string",
+    "lastOperatorUser" : "string",
+    "masterTaskCode" : "string",
+    "masterTaskId" : 0,
+    "masterTaskName" : "string",
+    "nodeCode" : "string",
+    "participateRoleType" : "string",
+    "planningBeginTime" : "string",
+    "planningEndTime" : "string",
+    "projectId" : 0,
+    "projectName" : "string",
+    "roleType" : "string",
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "stakeholderCode" : "string",
+    "statusCode" : 0,
+    "taskName" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 遗传办任务变更——项目变更 {anchor:modifysitetaskbyupdateprojectusingput}
+{noformat}
+PUT /task/modifySiteTaskByUpdateProject/{projectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*projectId*\\ \\ _可选_||项目ID||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/modifySiteTaskByUpdateProject/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 提交(退回)子任务 {anchor:modifysubtaskcommitstatususingpost}
+{noformat}
+POST /task/modifySubTaskCommitStatus
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*customerTaskRequest*\\ \\ _必填_||任务状态更新信息||[任务状态更新接收对象|#a15bb0b63e6473736e363eab217048cc]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/modifySubTaskCommitStatus
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "actionType" : 0,
+  "finishTimeStamp" : 0,
+  "statusCode" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 更新子任务计划时间 {anchor:modifysubtaskplantimeusingput}
+{noformat}
+PUT /task/modifySubTaskPlanTime/{subTaskId}/{planStartTimeStamp}/{planEndTimeStamp}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*planEndTimeStamp*\\ \\ _可选_||计划结束时间戳||integer (int64)|| |
+|*Path*|*planStartTimeStamp*\\ \\ _可选_||计划开始时间戳||integer (int64)|| |
+|*Path*|*subTaskId*\\ \\ _可选_||子任务ID||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/modifySubTaskPlanTime/0/0/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 更新子任务状态 {anchor:modifysubtaskstatususingpost}
+{noformat}
+POST /task/modifySubTaskStatus
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*customerTaskRequest*\\ \\ _必填_||任务状态更新信息||[任务状态更新接收对象|#a15bb0b63e6473736e363eab217048cc]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/modifySubTaskStatus
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "actionType" : 0,
+  "finishTimeStamp" : 0,
+  "statusCode" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目任务-查询子任务问卷信息 {anchor:taskdetailusingget}
+{noformat}
+GET /task/taskDetail/{subTaskId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*subTaskId*\\ \\ _必填_||子任务id||ref|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«object»|#2e9de6f836ac2d556229adbd14d64b43]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/taskDetail/ref
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : "object",
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 根据任务模块结构获取对应任务列表 {anchor:loadtasklistbytaskmodulecodeusingget}
+{noformat}
+GET /task/taskList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*pageSize*\\ \\ _可选_||pageSize数量||integer (int32)||{noformat}10{noformat}|
+|*Query*|*pages*\\ \\ _可选_||pages页数||integer (int32)||{noformat}1{noformat}|
+|*Query*|*projectId*\\ \\ _可选_||项目ID||integer (int32)||{noformat}0{noformat}|
+|*Query*|*siteId*\\ \\ _可选_||中心ID||integer (int32)||{noformat}0{noformat}|
+|*Query*|*statusCode*\\ \\ _可选_||状态信息(1:待完成、2:已完成、3:全部)||integer (int32)||{noformat}1{noformat}|
+|*Query*|*subTaskModuleCode*\\ \\ _可选_||子任务模块编码||string|| |
+|*Query*|*taskKeyWord*\\ \\ _可选_||任务关键字||string|| |
+|*Query*|*taskModuleCode*\\ \\ _可选_||任务模块编码||string|| |
+|*Query*|*totalSize*\\ \\ _可选_||totalSize 总数量||integer (int32)||{noformat}100{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«项目相关子任务信息»»|#75b61d6abd1b9dc840bcb470062d8ef2]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/taskList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "projectId" : 0,
+  "siteId" : 0,
+  "statusCode" : 0,
+  "subTaskModuleCode" : "string",
+  "taskKeyWord" : "string",
+  "taskModuleCode" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "description" : "string",
+      "finishRole" : "string",
+      "id" : 0,
+      "isCommit" : 0,
+      "isDelayed" : 0,
+      "isNewFlowRecord" : 0,
+      "isReturn" : 0,
+      "lastOperatorDesc" : "string",
+      "lastOperatorUser" : "string",
+      "masterTaskCode" : "string",
+      "masterTaskId" : 0,
+      "masterTaskName" : "string",
+      "nodeCode" : "string",
+      "participateRoleType" : "string",
+      "planningBeginTime" : "string",
+      "planningEndTime" : "string",
+      "projectId" : 0,
+      "projectName" : "string",
+      "roleType" : "string",
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "stakeholderCode" : "string",
+      "statusCode" : 0,
+      "taskName" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 任务模块结构列表 {anchor:loadtaskmodulelistusingget}
+{noformat}
+GET /task/taskModuleList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*projectId*\\ \\ _可选_||项目ID||integer (int32)||{noformat}0{noformat}|
+|*Query*|*siteId*\\ \\ _可选_||中心ID||integer (int32)||{noformat}0{noformat}|
+|*Query*|*statusCode*\\ \\ _可选_||状态信息(1:待完成、2:已完成、3:全部)||integer (int32)||{noformat}1{noformat}|
+|*Query*|*taskKeyWord*\\ \\ _可选_||任务关键字||string|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«任务模块信息»»|#7efdb27dd20fc4af0f37c216ddd7ff3d]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/taskModuleList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "projectId" : 0,
+  "siteId" : 0,
+  "statusCode" : 0,
+  "taskKeyWord" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "count" : 0,
+    "flowRecordCount" : 0,
+    "moduleCode" : "string",
+    "moduleName" : "string",
+    "spmTaskCountDetailList" : [ {
+      "count" : 0,
+      "flowRecordCount" : 0,
+      "masterTaskCode" : "string",
+      "masterTaskName" : "string",
+      "subTaskCode" : "string",
+      "subTaskName" : "string"
+    } ],
+    "subTaskDetailList" : [ {
+      "description" : "string",
+      "finishRole" : "string",
+      "id" : 0,
+      "isCommit" : 0,
+      "isDelayed" : 0,
+      "isNewFlowRecord" : 0,
+      "isReturn" : 0,
+      "lastOperatorDesc" : "string",
+      "lastOperatorUser" : "string",
+      "masterTaskCode" : "string",
+      "masterTaskId" : 0,
+      "masterTaskName" : "string",
+      "nodeCode" : "string",
+      "participateRoleType" : "string",
+      "planningBeginTime" : "string",
+      "planningEndTime" : "string",
+      "projectId" : 0,
+      "projectName" : "string",
+      "roleType" : "string",
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "stakeholderCode" : "string",
+      "statusCode" : 0,
+      "taskName" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ]
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 任务进度列表 {anchor:loadtaskprocesslistusingget}
+{noformat}
+GET /task/taskProcessList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*projectId*\\ \\ _可选_||项目ID||integer (int32)||{noformat}0{noformat}|
+|*Query*|*siteId*\\ \\ _可选_||中心ID||integer (int32)||{noformat}0{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«任务进度列表»|#f9fc1a2258011fe2c9d8abb3940d3890]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/task/taskProcessList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "projectId" : 0,
+  "siteId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "masterTaskDetailList" : [ {
+      "currentProgressRate" : 0,
+      "finishRole" : "string",
+      "id" : 0,
+      "isNewFlowRecord" : 0,
+      "nodeCode" : "string",
+      "nodeType" : 0,
+      "participateRoleType" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "sort" : 0,
+      "status" : 0,
+      "taskName" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "subTaskDetailList" : [ {
+      "description" : "string",
+      "finishRole" : "string",
+      "id" : 0,
+      "isCommit" : 0,
+      "isDelayed" : 0,
+      "isNewFlowRecord" : 0,
+      "isReturn" : 0,
+      "lastOperatorDesc" : "string",
+      "lastOperatorUser" : "string",
+      "masterTaskCode" : "string",
+      "masterTaskId" : 0,
+      "masterTaskName" : "string",
+      "nodeCode" : "string",
+      "participateRoleType" : "string",
+      "planningBeginTime" : "string",
+      "planningEndTime" : "string",
+      "projectId" : 0,
+      "projectName" : "string",
+      "roleType" : "string",
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "stakeholderCode" : "string",
+      "statusCode" : 0,
+      "taskName" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ]
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. SSU项目相关 {anchor:7eefbe48382a272706de6028d7ef119a}
+SSU项目相关接口管理
+
+
+h4. SSU项目相关-项目详情 {anchor:detailusingget}
+{noformat}
+GET /spmProject/detail/{projectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*projectId*\\ \\ _必填_||projectId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SsuProjectDetail»|#81128f7644783e9c9d18dd4b7a6a151a]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/detail/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "hasGenetic" : 0,
+    "id" : 0,
+    "leadingSites" : "string",
+    "mergePsv" : 0,
+    "piDoctorName" : "string",
+    "projectFullName" : "string",
+    "projectManager" : "string",
+    "projectManagerName" : "string",
+    "projectName" : "string",
+    "projectNo" : "string",
+    "researchDrug" : "string",
+    "siteFilterNumber" : 0,
+    "sitePlanNumber" : 0,
+    "sponsorName" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目相关-获取中心状态字典 {anchor:findallsitestatususingget}
+{noformat}
+GET /spmProject/findAllSiteStatus
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/findAllSiteStatus
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目相关-查询项目idnames列表 {anchor:findprojectidnamesusingpost}
+{noformat}
+POST /spmProject/findProjectIdNames
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[OnlyPagesRequest|#onlypagesrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/findProjectIdNames
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "pageSize" : 0,
+  "pages" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目相关-查询项目中心idnames列表 {anchor:findprojectsiteidnamesusingget}
+{noformat}
+GET /spmProject/findProjectSiteIdNames/{projectId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*projectId*\\ \\ _必填_||projectId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/findProjectSiteIdNames/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目相关-项目列表 {anchor:listusingpost_5}
+{noformat}
+POST /spmProject/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SsuProjectListRequest|#ssuprojectlistrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«CrmProjectList»»|#b7b0f67bd74e37f9c4ea433a214d674e]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "confirm" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "projectManager" : 0,
+  "searchKey" : "string",
+  "status" : 0,
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "businessManager" : 0,
+      "businessManagerName" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "hasGenetic" : 0,
+      "id" : 0,
+      "indication" : "string",
+      "isdeleted" : 0,
+      "isinvesStart" : 0,
+      "mainProjectId" : 0,
+      "mergePsv" : 0,
+      "opManager" : 0,
+      "opManagerName" : "string",
+      "projectCta" : "string",
+      "projectFullName" : "string",
+      "projectManager" : "string",
+      "projectManagerName" : "string",
+      "projectName" : "string",
+      "projectNo" : "string",
+      "projectSsuCtas" : [ {
+        "id" : 0,
+        "name" : "string"
+      } ],
+      "projectType" : 0,
+      "protocolName" : "string",
+      "recommendedSiteCount" : 0,
+      "remark" : "string",
+      "researchDrug" : "string",
+      "serviceScope" : 0,
+      "serviceScopeDetail" : "string",
+      "siteCount" : 0,
+      "siteFilterNumber" : 0,
+      "sitePlanNumber" : 0,
+      "sort" : 0,
+      "spmProjectRemindInfo" : {
+        "contractRemind" : 0,
+        "ethicRemind" : 0,
+        "handoverRemind" : 0,
+        "inheritanceRemind" : 0,
+        "projectApprovalRemind" : 0,
+        "projectId" : 0,
+        "surveyRemind" : 0
+      },
+      "spmProjectTaskCountInfo" : {
+        "contractCount" : 0,
+        "ethicCount" : 0,
+        "handoverCount" : 0,
+        "inheritanceCount" : 0,
+        "projectApprovalCount" : 0,
+        "projectId" : 0,
+        "successCount" : 0,
+        "surveyCount" : 0,
+        "surveyFailCount" : 0,
+        "surveySuccessCount" : 0
+      },
+      "sponsorName" : "string",
+      "startDate" : "string",
+      "status" : 0,
+      "statusDetail" : "string",
+      "trialStages" : 0,
+      "trialStagesDetail" : "string",
+      "trialType" : 0,
+      "trialTypeDetail" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. SSU项目相关-项目中心列表 {anchor:sitelistusingpost}
+{noformat}
+POST /spmProject/siteList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[CrmProjectSiteListRequest|#crmprojectsitelistrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«CrmProjectSite»»|#241477bd0343f2dce371fd4479ef7b2b]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmProject/siteList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "apmId" : 0,
+  "projectId" : 0,
+  "searchKey" : "string",
+  "status" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "city" : 0,
+    "cityName" : "string",
+    "commissioners" : [ {
+      "email" : "string",
+      "mobile" : "string",
+      "opUserId" : 0,
+      "siteId" : 0,
+      "userName" : "string"
+    } ],
+    "createTime" : "string",
+    "createUser" : 0,
+    "departmentId" : "string",
+    "departmentName" : "string",
+    "displayName" : "string",
+    "doctorAndDepartmentId" : "string",
+    "hospitalId" : 0,
+    "hospitalName" : "string",
+    "id" : 0,
+    "isdeleted" : 0,
+    "isleadingSite" : 0,
+    "piDoctorId" : "string",
+    "piDoctorName" : "string",
+    "pl" : "string",
+    "plName" : "string",
+    "projectId" : 0,
+    "projectName" : "string",
+    "projectNo" : "string",
+    "province" : 0,
+    "provinceName" : "string",
+    "remark" : "string",
+    "siteNo" : "string",
+    "siteRoleType" : "string",
+    "sort" : 0,
+    "spmSiteNewFollowRecord" : {
+      "content" : "string",
+      "followRecordId" : 0,
+      "planningEndTime" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "subTaskInfoId" : 0,
+      "taskName" : "string"
+    },
+    "spmSiteRemindInfo" : {
+      "projectId" : 0,
+      "remindCount" : 0,
+      "siteId" : 0
+    },
+    "status" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. Ssu文件相关 {anchor:c21fcc80cc51e09ddffc79f3b718b52b}
+文件相关接口管理(项目文件、交付文件、审核文件)
+
+
+h4. 文件管理->交付文件配置新增/编辑 {anchor:addormodifydeliverytemplateusingpost}
+{noformat}
+POST /ssuFile/addOrModifyDeliveryTemplate
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmDeliveryTemplateAddOrModifyRequest|#spmdeliverytemplateaddormodifyrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifyDeliveryTemplate
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "detail" : "string",
+  "fileName" : "string",
+  "fileRequire" : 0,
+  "fileType" : "string",
+  "folderId" : 0,
+  "id" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "quantity" : 0,
+  "subTaskId" : 0,
+  "tag" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->项目文件配置新增/编辑 {anchor:uploadprojectfileuploadusingpost}
+{noformat}
+POST /ssuFile/addOrModifyProjectFile
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*id*\\ \\ _可选_||主键ID||integer (int32)|| |
+|*FormData*|*request*\\ \\ _可选_||request||file|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmProjectFileTemplate»|#a64b1ce2d485e8c53f594c56d1e00f88]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifyProjectFile
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "id" : 0
+}
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileType" : "string",
+    "folderId" : 0,
+    "folderIds" : [ 0 ],
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->项目文件配置信息 {anchor:addormodifyprojectfileinfousingpost}
+{noformat}
+POST /ssuFile/addOrModifyProjectFileInfo
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||< [SSUProjectFileAddOrModifyRequest|#ssuprojectfileaddormodifyrequest] > array|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmProjectFileTemplate»»|#316d11ba2e32e3bd1e9ba75b053d84d4]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifyProjectFileInfo
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+[ {
+  "detail" : "string",
+  "fileName" : "string",
+  "fileType" : "string",
+  "folderId" : 0,
+  "id" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "subTaskId" : 0,
+  "tag" : "string",
+  "version" : "string",
+  "versionDate" : "string"
+} ]
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileType" : "string",
+    "folderId" : 0,
+    "folderIds" : [ 0 ],
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->中心立项文件配置信息新增/编辑 {anchor:addormodifysiteapproveusingpost}
+{noformat}
+POST /ssuFile/addOrModifySiteApprove
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||< [SSUSiteApproveAddOrModifyRequest|#ssusiteapproveaddormodifyrequest] > array|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteApproveFile»»|#d9bb96219342e224eef2757a44e0b712]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifySiteApprove
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+[ {
+  "detail" : "string",
+  "fileId" : 0,
+  "fileName" : "string",
+  "fileStatus" : 0,
+  "fileType" : "string",
+  "folderId" : 0,
+  "id" : 0,
+  "masterTaskCode" : "string",
+  "printOrder" : 0,
+  "printUser" : 0,
+  "projectId" : 0,
+  "quantity" : 0,
+  "siteId" : 0,
+  "subTaskId" : 0,
+  "tag" : "string",
+  "version" : "string",
+  "versionDate" : "string"
+} ]
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileStatus" : 0,
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "printOrder" : 0,
+    "printOrderName" : "string",
+    "printUser" : 0,
+    "printUserDetail" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "siteId" : 0,
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->中心立项文件配置新增/编辑 {anchor:uploadsiteapprovefileuploadusingpost}
+{noformat}
+POST /ssuFile/addOrModifySiteApproveFile
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*id*\\ \\ _可选_||主键ID||integer (int32)|| |
+|*FormData*|*request*\\ \\ _可选_||request||file|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmSiteApproveFile»|#a230c099036cad0bc7d70b6f0a6a403f]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifySiteApproveFile
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "id" : 0
+}
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileStatus" : 0,
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "printOrder" : 0,
+    "printOrderName" : "string",
+    "printUser" : 0,
+    "printUserDetail" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "siteId" : 0,
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->交付文件新增/编辑 {anchor:addormodifysitedeliveryfileusingpost}
+{noformat}
+POST /ssuFile/addOrModifySiteDeliveryFile
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*fileId*\\ \\ _可选_||文件ID(新增时为0)||integer (int32)|| |
+|*Query*|*fileName*\\ \\ _可选_||文件名称||string|| |
+|*Query*|*id*\\ \\ _可选_||主键ID||integer (int32)|| |
+|*Query*|*subTaskId*\\ \\ _可选_||任务id||integer (int32)|| |
+|*FormData*|*request*\\ \\ _可选_||request||file|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmSiteDeliveryFile»|#873b4ee8277c411b2b91698d206257bf]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/addOrModifySiteDeliveryFile
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "fileId" : 0,
+  "fileName" : "string",
+  "id" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "archivePath" : "string",
+    "archiveStatus" : 0,
+    "archiveStatusDetail" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileRequire" : 0,
+    "fileRequireName" : "string",
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "searchKey" : "string",
+    "siteId" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "updateUserName" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件目录管理--删除文件目录（立项、伦理、遗传办） {anchor:delfilefolderusingdelete}
+{noformat}
+DELETE /ssuFile/delFileFolder/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/delFileFolder/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->交付文件配置文件删除 {anchor:deletedeliverytemplateusingdelete}
+{noformat}
+DELETE /ssuFile/deleteDeliveryTemplate/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/deleteDeliveryTemplate/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->项目文件配置删除 {anchor:delprojectfileusingdelete}
+{noformat}
+DELETE /ssuFile/deleteProjectFile/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/deleteProjectFile/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->中心立项文件配置删除 {anchor:delsiteapprovefileusingdelete}
+{noformat}
+DELETE /ssuFile/deleteSiteApproveFile/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/deleteSiteApproveFile/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->中心交付文件删除 {anchor:deletesitedeliveryfileusingdelete}
+{noformat}
+DELETE /ssuFile/deleteSiteDeliveryFile/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/deleteSiteDeliveryFile/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->文件打包下载 {anchor:downloadzipusingpost}
+{noformat}
+POST /ssuFile/downloadZip
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FilesDownloadRequest|#filesdownloadrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/downloadZip
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "filePaths" : [ "string" ],
+  "projectId" : 0,
+  "rootPath" : "string",
+  "siteId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->交付文件配置列表 {anchor:finddeliverytemplatelistusingpost}
+{noformat}
+POST /ssuFile/findDeliveryTemplateList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmFileInfoSearchRequest|#spmfileinfosearchrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmDeliveryTemplate»»|#65971df977812b3027990e7d7f8a8270]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findDeliveryTemplateList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "folderIds" : [ 0 ],
+  "id" : 0,
+  "isdeleted" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileName" : "string",
+    "fileRequire" : 0,
+    "fileRequireName" : "string",
+    "fileType" : "string",
+    "folderId" : 0,
+    "folderIds" : [ 0 ],
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "searchKey" : "string",
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 查询目录信息 {anchor:findfilefolderusingpost}
+{noformat}
+POST /ssuFile/findFileFolder
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderAddRequest|#folderaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«FolderTreeResponse»»|#06241a5672fc7820f7a6543d28f82ec7]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findFileFolder
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "baseFolderType" : 0,
+    "children" : [ {
+      "baseFolderType" : 0,
+      "children" : [ "..." ],
+      "createTime" : "string",
+      "createUser" : 0,
+      "detail" : "string",
+      "fileId" : 0,
+      "fileName" : "string",
+      "folderId" : 0,
+      "folderName" : "string",
+      "folderParentId" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "path" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "folderId" : 0,
+    "folderName" : "string",
+    "folderParentId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "path" : "string",
+    "projectId" : 0,
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "type" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->目录下文件数(交付文件) {anchor:findfolderfilenumusingpost}
+{noformat}
+POST /ssuFile/findFolderFileNum
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderFileNumRequest|#folderfilenumrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdNameTotal»»|#eafc25542a1e9eacfa728e063a7f1c79]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findFolderFileNum
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "folderIds" : [ 0 ],
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string",
+    "total" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->项目文件配置列表 {anchor:findprojectfilelistusingpost}
+{noformat}
+POST /ssuFile/findProjectFileList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmFileInfoSearchRequest|#spmfileinfosearchrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmProjectFileTemplate»»|#316d11ba2e32e3bd1e9ba75b053d84d4]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findProjectFileList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "folderIds" : [ 0 ],
+  "id" : 0,
+  "isdeleted" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileType" : "string",
+    "folderId" : 0,
+    "folderIds" : [ 0 ],
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件目录管理--项目(交付)中心文件目录 {anchor:findprojectsitedeliveryfolderusingpost}
+{noformat}
+POST /ssuFile/findProjectSiteDeliveryFolder
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderAddRequest|#folderaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«FolderTreeResponse»»|#06241a5672fc7820f7a6543d28f82ec7]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findProjectSiteDeliveryFolder
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "baseFolderType" : 0,
+    "children" : [ {
+      "baseFolderType" : 0,
+      "children" : [ "..." ],
+      "createTime" : "string",
+      "createUser" : 0,
+      "detail" : "string",
+      "fileId" : 0,
+      "fileName" : "string",
+      "folderId" : 0,
+      "folderName" : "string",
+      "folderParentId" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "path" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "folderId" : 0,
+    "folderName" : "string",
+    "folderParentId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "path" : "string",
+    "projectId" : 0,
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "type" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件目录管理--项目(递交）中心文件目录 {anchor:findprojectsubmitsitefolderusingpost}
+{noformat}
+POST /ssuFile/findProjectSubmitSiteFolder
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderAddRequest|#folderaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«FolderTreeResponse»»|#06241a5672fc7820f7a6543d28f82ec7]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findProjectSubmitSiteFolder
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "baseFolderType" : 0,
+    "children" : [ {
+      "baseFolderType" : 0,
+      "children" : [ "..." ],
+      "createTime" : "string",
+      "createUser" : 0,
+      "detail" : "string",
+      "fileId" : 0,
+      "fileName" : "string",
+      "folderId" : 0,
+      "folderName" : "string",
+      "folderParentId" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "path" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "folderId" : 0,
+    "folderName" : "string",
+    "folderParentId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "path" : "string",
+    "projectId" : 0,
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "type" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->中心立项材料列表 {anchor:findsiteapprovefilelistusingpost}
+{noformat}
+POST /ssuFile/findSiteApproveList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SSUSiteApproveRequest|#ssusiteapproverequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteApproveFile»»|#d9bb96219342e224eef2757a44e0b712]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findSiteApproveList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "fileStatus" : 0,
+  "folderId" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0,
+  "userType" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileStatus" : 0,
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "printOrder" : 0,
+    "printOrderName" : "string",
+    "printUser" : 0,
+    "printUserDetail" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "remark" : "string",
+    "searchKey" : "string",
+    "siteId" : 0,
+    "sort" : 0,
+    "status" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "version" : "string",
+    "versionDate" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->交付文件列表 {anchor:findsitedeliverylistusingpost}
+{noformat}
+POST /ssuFile/findSiteDeliveryList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SSUSiteDeliveryRequest|#ssusitedeliveryrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmSiteDeliveryFile»»|#b11200e120b236b2f042e0f4eb483099]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findSiteDeliveryList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "folderId" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "roleType" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "archivePath" : "string",
+    "archiveStatus" : 0,
+    "archiveStatusDetail" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileRequire" : 0,
+    "fileRequireName" : "string",
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "searchKey" : "string",
+    "siteId" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "updateUserName" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 拉取中心立项项目文件 {anchor:findsiteprojectfilelistusingpost}
+{noformat}
+POST /ssuFile/findSiteProjectFileList
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderAddRequest|#folderaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«FolderTreeResponse»»|#06241a5672fc7820f7a6543d28f82ec7]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/findSiteProjectFileList
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "projectId" : 0,
+  "searchKey" : "string",
+  "siteId" : 0,
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "baseFolderType" : 0,
+    "children" : [ {
+      "baseFolderType" : 0,
+      "children" : [ "..." ],
+      "createTime" : "string",
+      "createUser" : 0,
+      "detail" : "string",
+      "fileId" : 0,
+      "fileName" : "string",
+      "folderId" : 0,
+      "folderName" : "string",
+      "folderParentId" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "path" : "string",
+      "projectId" : 0,
+      "siteId" : 0,
+      "siteName" : "string",
+      "sort" : 0,
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "folderId" : 0,
+    "folderName" : "string",
+    "folderParentId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "path" : "string",
+    "projectId" : 0,
+    "siteId" : 0,
+    "siteName" : "string",
+    "sort" : 0,
+    "type" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件目录管理--编辑文件目录（立项、伦理、遗传办） {anchor:modifyfilefolderusingpost}
+{noformat}
+POST /ssuFile/modifyFileFolder
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[FolderModifyRequest|#foldermodifyrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/modifyFileFolder
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "addFolderList" : [ 0 ],
+  "projectId" : 0,
+  "removeFolderList" : [ 0 ],
+  "siteId" : 0,
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 文件管理->更新中心交付文件信息 {anchor:updatesitedeliveryfileinfousingpost}
+{noformat}
+POST /ssuFile/updateSiteDeliveryFileInfo
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SSUSiteDeliveryInfoUpdate|#ssusitedeliveryinfoupdate]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmSiteDeliveryFile»|#873b4ee8277c411b2b91698d206257bf]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/ssuFile/updateSiteDeliveryFileInfo
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "archivePath" : "string",
+  "archiveStatus" : 0,
+  "detail" : "string",
+  "fileId" : 0,
+  "fileName" : "string",
+  "fileType" : "string",
+  "id" : 0,
+  "isdeleted" : 0,
+  "projectId" : 0,
+  "siteId" : 0,
+  "tag" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "archivePath" : "string",
+    "archiveStatus" : 0,
+    "archiveStatusDetail" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "fileId" : 0,
+    "fileName" : "string",
+    "fileRequire" : 0,
+    "fileRequireName" : "string",
+    "fileType" : "string",
+    "flag" : 0,
+    "folderId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "quantity" : 0,
+    "searchKey" : "string",
+    "siteId" : 0,
+    "subTaskId" : 0,
+    "tag" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0,
+    "updateUserName" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 中心文件管理-中心文件 {anchor:e9d892fac8850be6238d023227df9945}
+中心文件相关接口管理
+
+
+h4. 中心文件-文件上传 {anchor:fileuploadusingpost}
+{noformat}
+POST /spmHospitalFile/addOrModify
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Query*|*fileId*\\ \\ _可选_||文件ID(新增时为0)||integer (int32)|| |
+|*Query*|*fileName*\\ \\ _可选_||文件名称||string|| |
+|*Query*|*flag*\\ \\ _可选_||是否更新文件标志(0 否 1是)||string|| |
+|*Query*|*hospitalMainId*\\ \\ _可选_||医院主ID||integer (int32)|| |
+|*Query*|*id*\\ \\ _可选_||主键ID(新增时为0)||integer (int32)|| |
+|*Query*|*lable*\\ \\ _可选_||标签(多个用逗号隔开)||string|| |
+|*Query*|*printFormat*\\ \\ _可选_||打印格式||integer (int32)|| |
+|*Query*|*printQuantity*\\ \\ _可选_||打印份数||integer (int32)|| |
+|*Query*|*realName*\\ \\ _可选_||实际文件名称||string|| |
+|*Query*|*remark*\\ \\ _可选_||备注||string|| |
+|*Query*|*type*\\ \\ _可选_||文件类型||integer (int32)|| |
+|*FormData*|*request*\\ \\ _可选_||request||file|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmHospitalFile/addOrModify
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 query
+{code:language=json}
+{
+  "fileId" : 0,
+  "fileName" : "string",
+  "flag" : "string",
+  "hospitalMainId" : 0,
+  "id" : 0,
+  "lable" : "string",
+  "printFormat" : 0,
+  "printQuantity" : 0,
+  "realName" : "string",
+  "remark" : "string",
+  "type" : 0
+}
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心文件-文件删除 {anchor:delfileusingdelete}
+{noformat}
+DELETE /spmHospitalFile/deleteFile/{id}/{fileId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*fileId*\\ \\ _可选_||文件id||integer (int32)|| |
+|*Path*|*id*\\ \\ _可选_||主键id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*204*||No Content||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmHospitalFile/deleteFile/0/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心文件-查询文件路径 {anchor:findfilepathusingget}
+{noformat}
+GET /spmHospitalFile/findFilePath/{fileId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*fileId*\\ \\ _必填_||fileId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«string»|#9668a7b1ed1a8a4a83d48793d5d416e7]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmHospitalFile/findFilePath/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : "string",
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心文件-查询中心信息 {anchor:findhospitalinfousingget}
+{noformat}
+GET /spmHospitalFile/findHospitalInfo/{id}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*id*\\ \\ _必填_||id||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«IdName»|#863909f8a9141f668574431d45440433]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmHospitalFile/findHospitalInfo/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "id" : 0,
+    "name" : "string"
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心文件-文件列表 {anchor:findfilelistusingpost}
+{noformat}
+POST /spmHospitalFile/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmHospitalFileSearch|#spmhospitalfilesearch]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmHospitalFileList»»|#1b7655f4446b63ff2ebad9cd99493eec]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmHospitalFile/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "hospitalMainId" : 0,
+  "lable" : "string",
+  "searchKey" : "string",
+  "type" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "createTime" : "string",
+    "createUser" : 0,
+    "fileId" : 0,
+    "fileName" : "string",
+    "hospitalMainId" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "lable" : "string",
+    "lableDetail" : "string",
+    "printFormat" : 0,
+    "printFormatDetail" : "string",
+    "printQuantity" : 0,
+    "realName" : "string",
+    "remark" : "string",
+    "type" : 0,
+    "typeDetail" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 中心管理-中心 {anchor:45824f4741cac329bfa4e88706182d8d}
+中心管理-中心接口管理
+
+
+h4. 中心-新增中心 {anchor:listusingpost_1}
+{noformat}
+POST /hospital/add
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmHospitalAddRequest|#spmhospitaladdrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmHospitalMain»|#8fc766ae41e047861a1d465859c750f5]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/add
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "city" : 0,
+  "cityName" : "string",
+  "hospitalId" : 0,
+  "hospitalName" : "string",
+  "province" : 0,
+  "provinceName" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "city" : 0,
+    "cityName" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "hospitalId" : 0,
+    "hospitalName" : "string",
+    "id" : 0,
+    "isdeleted" : 0,
+    "province" : 0,
+    "provinceName" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心-中心区域(省份) {anchor:listusingpost_3}
+{noformat}
+POST /hospital/area
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/area
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心-中心区域(城市) {anchor:listusingpost_2}
+{noformat}
+POST /hospital/area/city/{provinceId}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*provinceId*\\ \\ _必填_||provinceId||integer (int32)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/area/city/0
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心-中心下拉列表 {anchor:hospitalsearchusingpost}
+{noformat}
+POST /hospital/dc/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[HospitalMainSearchRequest|#hospitalmainsearchrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||object|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/dc/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "city" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "province" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 中心-中心列表 {anchor:listusingpost_4}
+{noformat}
+POST /hospital/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmHospitalPagesRequest|#spmhospitalpagesrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«BaseListTo«SpmHospitalMain»»|#595e0a508a2f192b8bd19e9a963886d0]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "city" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "province" : 0,
+  "searchKey" : "string",
+  "totalSize" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "pageData" : [ {
+      "city" : 0,
+      "cityName" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "hospitalId" : 0,
+      "hospitalName" : "string",
+      "id" : 0,
+      "isdeleted" : 0,
+      "province" : 0,
+      "provinceName" : "string",
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "pageSize" : 0,
+    "pages" : 0,
+    "totalPages" : 0,
+    "totalSize" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 中心-中心搜索列表 {anchor:searchlistusingpost}
+{noformat}
+POST /hospital/search/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[OnlySearchKeyRequest|#onlysearchkeyrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«IdName»»|#b58e663b873f77191bfb9ea1e9e49c97]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/hospital/search/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "searchKey" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "id" : 0,
+    "name" : "string"
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 公共接口 {anchor:926ac08843c1f757ae8e532b0daf7186}
+公共接口
+
+
+h4. 字典-根据typeCode获取列表 {anchor:listbytypecodeusingget}
+{noformat}
+GET /common/list/byTypeCode/{typeCode}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*typeCode*\\ \\ _必填_||typeCode||string|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«CrmDictGeneral»»|#9bc9d0afadc7490398979d4a9620c7e0]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/common/list/byTypeCode/string
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "code" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "name" : "string",
+    "sort" : 0,
+    "typeCode" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 后端用户 {anchor:9bf5e4542f473ddea19d5b27c7956142}
+后端用户—后端用户管理接口
+
+
+h4. 后端用户-使用token登录 {anchor:loginbytokenusingpost}
+{noformat}
+POST /admin/loginByToken
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«AdminUserLogin»|#e84ee3f18cca3a0746dd7787b3902444]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/admin/loginByToken
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "accessToken" : "string",
+    "adminUser" : {
+      "createTime" : "string",
+      "createUser" : 0,
+      "groupId" : "string",
+      "id" : 0,
+      "isdeleted" : 0,
+      "lastLoginTime" : "string",
+      "password" : "string",
+      "realName" : "string",
+      "status" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0,
+      "username" : "string"
+    },
+    "menus" : [ {
+      "authName" : "string",
+      "authUrl" : "string",
+      "createTime" : "string",
+      "createUser" : 0,
+      "id" : 0,
+      "isdeleted" : 0,
+      "isshow" : 0,
+      "pid" : 0,
+      "selected" : true,
+      "sort" : 0,
+      "statusBoolean" : true,
+      "type" : 0,
+      "updateTime" : "string",
+      "updateUser" : 0
+    } ],
+    "permissions" : [ {
+      "authName" : "string",
+      "authUrl" : "string",
+      "groupId" : 0,
+      "id" : 0,
+      "productCode" : "string"
+    } ]
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 字典 {anchor:7bcd89e7fdc0f2f6c32bd53b406e35ba}
+字典-字典接口
+
+
+h4. 字典-根据typeCode获取列表 {anchor:listbytypecodeusingget_1}
+{noformat}
+GET /dictGeneral/list/byTypeCode/{typeCode}
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Path*|*typeCode*\\ \\ _必填_||typeCode||string|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«CrmDictGeneral»»|#9bc9d0afadc7490398979d4a9620c7e0]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/dictGeneral/list/byTypeCode/string
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "code" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "id" : 0,
+    "isdeleted" : 0,
+    "name" : "string",
+    "sort" : 0,
+    "typeCode" : "string",
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h3. 快递相关 {anchor:8d84f9bd166cedbb33f068b3142d8ccc}
+快递相关接口管理
+
+
+h4. 快递相关接口管理--新增快递信息 {anchor:addormodifyexpressinfousingpost}
+{noformat}
+POST /spmExpress/addOrModifyExpressInfo
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmExpressInfoAddRequest|#spmexpressinfoaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«SpmExpressInfo»|#196b22ed81670280a6c78ddb55f82860]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmExpress/addOrModifyExpressInfo
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "company" : "string",
+  "detail" : "string",
+  "expressNumber" : "string",
+  "id" : 0,
+  "isdeleted" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "remark" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : {
+    "company" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "expressNumber" : "string",
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "remark" : "string",
+    "siteId" : 0,
+    "subTaskId" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 快递相关接口管理--删除快递信息 {anchor:deleteexpressinfousingpost}
+{noformat}
+POST /spmExpress/delete
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmExpressInfoAddRequest|#spmexpressinfoaddrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«NullDataTo»|#57934316686d0c0f06bc4c9a5f3c6026]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmExpress/delete
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "company" : "string",
+  "detail" : "string",
+  "expressNumber" : "string",
+  "id" : 0,
+  "isdeleted" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "remark" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : { },
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+h4. 快递相关接口管理--查询快递信息 {anchor:findexpressinfousingpost}
+{noformat}
+POST /spmExpress/list
+{noformat}
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Header*|*access-token*\\ \\ _可选_||令牌||string||{noformat}"D9E61744C0C94905AD0E7C982E1406F7"{noformat}|
+|*Header*|*product-code*\\ \\ _必填_||产品code||string||{noformat}"shuwen-web"{noformat}|
+|*Header*|*version*\\ \\ _必填_||版本号||string||{noformat}"1.0.0"{noformat}|
+|*Body*|*request*\\ \\ _必填_||request||[SpmExpressInfoSearchRequest|#spmexpressinfosearchrequest]|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[BaseApiResponse«List«SpmExpressInfo»»|#d26ce3cdae43a2fc3f6a6e4a0472d77f]|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/spmExpress/list
+{code}
+
+
+h6. 请求 header
+{code:language=json}
+"string"
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "company" : "string",
+  "detail" : "string",
+  "expressNumber" : "string",
+  "isdeleted" : 0,
+  "masterTaskCode" : "string",
+  "projectId" : 0,
+  "remark" : "string",
+  "siteId" : 0,
+  "subTaskId" : 0
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "data" : [ {
+    "company" : "string",
+    "createTime" : "string",
+    "createUser" : 0,
+    "detail" : "string",
+    "expressNumber" : "string",
+    "id" : 0,
+    "isdeleted" : 0,
+    "masterTaskCode" : "string",
+    "projectId" : 0,
+    "remark" : "string",
+    "siteId" : 0,
+    "subTaskId" : 0,
+    "updateTime" : "string",
+    "updateUser" : 0
+  } ],
+  "errorCode" : 0,
+  "errorMessage" : "string",
+  "status" : 0,
+  "subCode" : 0,
+  "subMessage" : "string"
+}
+{code}
+
+
+
